@@ -124,8 +124,9 @@ function verifyTypeScriptSetup() {
     // We do not support absolute imports, though this may come as a future
     // enhancement
     baseUrl: {
-      value: undefined,
-      reason: 'absolute imports are not supported (yet)',
+      value: process.env.APP_SRC,
+      reason:
+        'support relative imports from base source with APP_SRC=src by default',
     },
     paths: { value: undefined, reason: 'aliased imports are not supported' },
   };
