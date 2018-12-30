@@ -8,6 +8,12 @@ Create React apps with no build configuration.
 Create React App works on macOS, Windows, and Linux.<br>
 If something doesn’t work, please [file an issue](https://github.com/facebook/create-react-app/issues/new).
 
+## Quick Usage
+
+```sh
+yarn create react-app test-rijudev-cra --scripts-version @rijudev/react-scripts --typescript
+```
+
 ## Quick Overview
 
 ```sh
