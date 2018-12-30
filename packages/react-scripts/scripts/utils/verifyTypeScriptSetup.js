@@ -85,6 +85,8 @@ function verifyTypeScriptSetup() {
     process.exit(1);
   }
 
+  console.log(paths, paths.appPath, paths.servedPath, process.env.APP_SRC);
+
   const compilerOptions = {
     // These are suggested values and will be set when not present in the
     // tsconfig.json
