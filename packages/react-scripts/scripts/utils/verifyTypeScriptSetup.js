@@ -85,8 +85,6 @@ function verifyTypeScriptSetup() {
     process.exit(1);
   }
 
-  console.log(paths, paths.appPath, paths.servedPath, process.env.APP_SRC);
-
   const compilerOptions = {
     // These are suggested values and will be set when not present in the
     // tsconfig.json
@@ -126,10 +124,9 @@ function verifyTypeScriptSetup() {
     // We do not support absolute imports, though this may come as a future
     // enhancement
     baseUrl: {
-      parsedValue: path.join(paths.appPath || '', process.env.APP_SRC),
-      value: process.env.APP_SRC,
-      reason:
-        'support relative imports from base source with APP_SRC=src by default',
+      parsedValue: paths.appSrc,
+      value: 'src',
+      reason: 'support relative imports from app src',
     },
     paths: { value: undefined, reason: 'aliased imports are not supported' },
   };
