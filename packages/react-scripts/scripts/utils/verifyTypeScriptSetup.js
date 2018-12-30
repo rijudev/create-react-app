@@ -124,7 +124,7 @@ function verifyTypeScriptSetup() {
     // We do not support absolute imports, though this may come as a future
     // enhancement
     baseUrl: {
-      parsedValue: path.join(paths.appPath, process.env.APP_SRC),
+      parsedValue: path.join(paths.appPath || '', process.env.APP_SRC),
       value: process.env.APP_SRC,
       reason:
         'support relative imports from base source with APP_SRC=src by default',
