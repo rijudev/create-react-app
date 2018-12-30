@@ -60,7 +60,8 @@ dotenvFiles.forEach(dotenvFile => {
 const appDirectory = fs.realpathSync(process.cwd());
 process.env.NODE_PATH = (process.env.NODE_PATH || '')
   .split(path.delimiter)
-  .filter(folder => folder && !path.isAbsolute(folder))
+  .filter(folder => (folder && !path.isAbsolute(folder)) || folder === 'src')
+  .concat('src')
   .map(folder => path.resolve(appDirectory, folder))
   .join(path.delimiter);
 
