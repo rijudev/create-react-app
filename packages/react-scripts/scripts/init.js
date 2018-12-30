@@ -217,7 +217,8 @@ module.exports = function(
   // Change displayed command to yarn instead of yarnpkg
   const displayedCommand = useYarn ? 'yarn' : 'npm';
 
-  console.log(chalk.cyan('Rijudev Create React App Template'));
+  console.log();
+  console.log(chalk.red('Rijudev Create React App Template'));
   console.log(`Success! Created ${appName} at ${appPath}`);
   console.log('Inside that directory, you can run several commands:');
   console.log();
